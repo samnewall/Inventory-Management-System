@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -16,9 +16,18 @@ import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class downloadTransactions.
+ */
 public class downloadTransactions {
 	
-	public static void main(String[] args) {
+		/**
+		 * The main method.
+		 *
+		 * @param args the arguments
+		 */
+		public static void main(String[] args) {
 
 		// Define connection to db
         String jdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";

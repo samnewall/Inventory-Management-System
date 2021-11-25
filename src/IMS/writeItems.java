@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -10,14 +10,30 @@ import java.sql.PreparedStatement;
 import java.util.Scanner;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class writeItems.
+ */
 public class writeItems {
 	
+	/** The item description. */
 	// Create objects of database table columns
 	static String itemDescription;
+	
+	/** The unit price. */
 	static double unitPrice;
+	
+	/** The quantity. */
 	static int quantity;
+	
+	/** The total value. */
 	static double totalValue;
 	
+   /**
+    * The main method.
+    *
+    * @param args the arguments
+    */
    public static void main(String[] args) {
 	  // Define connection to db
       String JdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";
@@ -52,6 +68,12 @@ public class writeItems {
     	    try { conn.close(); } catch (Exception e) { /* Ignored */ }
       }
    }
+   
+   /**
+    * Input.
+    *
+    * @param keyboardInput the keyboard input
+    */
    // User prompt for data entry
    public static void input(Scanner keyboardInput) {
 	   	    

@@ -13,9 +13,18 @@ import java.util.Locale;
 import java.util.Scanner;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class searchItems.
+ */
 public class searchItems {
 	
-	 public static void main(String[] args)
+	 /**
+ 	 * The main method.
+ 	 *
+ 	 * @param args the arguments
+ 	 */
+ 	public static void main(String[] args)
 	  {
 	    @SuppressWarnings("resource") // Resource leak on scan, this suppresses the warning given from IDE
 		 Scanner scan = new Scanner(System.in);

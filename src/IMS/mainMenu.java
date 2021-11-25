@@ -1,15 +1,24 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class mainMenu.
+ */
 public class mainMenu
 {
 	
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String args[])
 	
 	{

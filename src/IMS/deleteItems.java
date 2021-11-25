@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -9,11 +9,22 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
 
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class deleteItems.
+ */
 public class deleteItems {
 	
+			/** The id. */
 			// Create objects of database table columns
 			static int id;
-			
+		
+			/**
+			 * The main method.
+			 *
+			 * @param args the arguments
+			 */
 		   public static void main(String[] args) {
 			   
 			  // Define connection to db
@@ -47,6 +58,11 @@ public class deleteItems {
 		      }
 		   }
 		   // User prompt for data entry
+		   /**
+   		 * Input.
+   		 *
+   		 * @param keyboardInput the keyboard input
+   		 */
 		   public static void input(Scanner keyboardInput) {
 		      System.out.println("Enter ID of item to be deleted: ");
 		      id = keyboardInput.nextInt();

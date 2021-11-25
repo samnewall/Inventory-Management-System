@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -9,16 +9,32 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class updateItems.
+ */
 public class updateItems {
 	
+		/** The id. */
 		// Create objects of database table columns
 		static int id;
+		
+		/** The quantity. */
 		static int quantity;
+		
+		/** The total value. */
 		static double totalValue;
+		
+		/** The unit price. */
 		static double unitPrice;
 
 		
-	   public static void main(String[] args) {
+	   /**
+   	 * The main method.
+   	 *
+   	 * @param args the arguments
+   	 */
+   	public static void main(String[] args) {
 		   
 		  // Define connection to db
 	      String JdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";
@@ -53,7 +69,13 @@ public class updateItems {
 	    	    try { conn.close(); } catch (Exception e) { /* Ignored */ }
 	      }
 	   }
-	   // User prompt for data entry
+	   
+   	/**
+   	 * Input.
+   	 *
+   	 * @param keyboardInput the keyboard input
+   	 */
+   	// User prompt for data entry
 	   public static void input(Scanner keyboardInput) {
 	      System.out.println("Enter new quantity: ");
 	      quantity = keyboardInput.nextInt();

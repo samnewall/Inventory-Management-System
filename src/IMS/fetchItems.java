@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -12,10 +12,19 @@ import java.util.Currency;
 import java.util.Locale;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class fetchItems.
+ */
 public class fetchItems {
 	
 	
-	 public static void main(String[] args)
+	 /**
+ 	 * The main method.
+ 	 *
+ 	 * @param args the arguments
+ 	 */
+ 	public static void main(String[] args)
 	  {
 	    try
 	    {

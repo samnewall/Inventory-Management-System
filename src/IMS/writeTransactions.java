@@ -1,6 +1,6 @@
 /**
  * @author Samuel Newall / Student Number: S174348
- * @version 1
+ * @version 1.1
  */
 package IMS;
 
@@ -11,18 +11,37 @@ import java.util.Currency;
 import java.util.Locale;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class writeTransactions.
+ */
 public class writeTransactions {
 	
+	/** The item description. */
 	// Create objects of database table columns
 	static String itemDescription;
+	
+	/** The quantity sold. */
 	static int quantitySold;
+	
+	/** The amount. */
 	static double amount;
+	
+	/** The current stock. */
 	static int currentStock;
 	
+	/** The locale. */
 	// Set locale and currency format to UK/GBP
     Locale locale = Locale.UK;
+    
+    /** The curr. */
     Currency curr = Currency.getInstance(locale);
    
+   /**
+    * The main method.
+    *
+    * @param args the arguments
+    */
    public static void main(String[] args) {
 	  // Define connection to db
       String JdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";
@@ -57,6 +76,12 @@ public class writeTransactions {
     	    try { conn.close(); } catch (Exception e) { /* Ignored */ }
       }
    }
+   
+   /**
+    * Input.
+    *
+    * @param keyboardInput the keyboard input
+    */
    // User prompt for data entry
    public static void input(Scanner keyboardInput) {
       System.out.println("Enter item description: ");
