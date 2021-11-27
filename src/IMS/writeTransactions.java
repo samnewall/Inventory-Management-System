@@ -7,8 +7,6 @@ package IMS;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.util.Currency;
-import java.util.Locale;
 import java.util.Scanner;
 
 // TODO: Auto-generated Javadoc
@@ -24,19 +22,16 @@ public class writeTransactions {
 	/** The quantity sold. */
 	static int quantitySold;
 	
+	/** The quantity brought. */
+	static int quantityBrought;
+	
 	/** The amount. */
 	static double amount;
 	
 	/** The current stock. */
 	static int currentStock;
 	
-	/** The locale. */
-	// Set locale and currency format to UK/GBP
-    Locale locale = Locale.UK;
-    
-    /** The curr. */
-    Currency curr = Currency.getInstance(locale);
-   
+ 
    /**
     * The main method.
     *
@@ -51,7 +46,7 @@ public class writeTransactions {
       // Create scanner for user input and user defined prepared SQL statement
       Scanner keyboardInput=new Scanner(System.in);
       PreparedStatement pstmt = null;
-      String query = "INSERT INTO transactions(ID, itemDescription, quantitySold, amount, currentStock) VALUES (null, ?, ?, ?, ?)";
+      String query = "INSERT INTO transactions(ID, itemDescription, quantitySold, quantityBrought, amount, currentStock) VALUES (null, ?, ?, ?, ?, ?)";
       // Connect and prompt for user input
       // Values entered in order of query
       try {
@@ -60,8 +55,9 @@ public class writeTransactions {
          pstmt = conn.prepareStatement(query);
          pstmt.setString(1, itemDescription);
          pstmt.setInt(2, quantitySold);
-         pstmt.setDouble(3, amount);
-         pstmt.setInt(4, currentStock);
+         pstmt.setInt(3, quantityBrought);
+         pstmt.setDouble(4, amount);
+         pstmt.setInt(5, currentStock);
          int status = pstmt.executeUpdate();
          if(status > 0) {
             System.out.println("Record is inserted successfully !!!");
@@ -87,6 +83,8 @@ public class writeTransactions {
       System.out.println("Enter item description: ");
       itemDescription = keyboardInput.nextLine();
       System.out.println("Enter quantity sold: ");
+      quantitySold = keyboardInput.nextInt();
+      System.out.println("Enter quantity brought: ");
       quantitySold = keyboardInput.nextInt();
       System.out.println("Enter amount: ");
       amount = keyboardInput.nextDouble();

@@ -65,7 +65,7 @@ public class downloadTransactions {
                 double amount = rs.getDouble("amount");
                 int currentStock = rs.getInt("currentStock");
                  
-                // 
+                 
                 String line = String.format("\"%d\",%s,%d,%f,%d",
                         ID, itemDescription, quantitySold, amount, currentStock);
                  

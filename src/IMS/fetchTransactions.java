@@ -56,11 +56,12 @@ public class fetchTransactions {
 	        int ID = rs.getInt("ID");
 	        String ItemDescription = rs.getString("itemDescription");
 	        int quantitySold = rs.getInt("quantitySold");
+	        int quantityBrought = rs.getInt("quantityBrought");
 	        double amount = rs.getDouble("amount");
 	        int currentStock = rs.getInt("currentStock");
         
 	        // Print the results
-	        System.out.format("ID: " + "%s " + "Description: " + "%s " + "Quantity Sold: " + "%s " + "Total Charged: " + curr.getSymbol() + "%s " + "Current Stock (at time of purchase): " + "%s\n ", ID, ItemDescription, quantitySold, amount, currentStock);
+	        System.out.format("ID: " + "%s " + "Description: " + "%s " + "Quantity Sold: " + "%s " + "Quantity Brought: " + "%s " + "Total Charged: " + curr.getSymbol() + "%s " + "Current Stock (at time of purchase): " + "%s\n ", ID, ItemDescription, quantitySold, quantityBrought, amount, currentStock);
 	      }
 	      // Close the connection
 	      // Otherwise new connections will keep being made, resulting in com.mysql.jdbc.CommunicationsException error
