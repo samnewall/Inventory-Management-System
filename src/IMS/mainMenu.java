@@ -53,13 +53,12 @@ public class mainMenu
 		System.out.print("\n Enter a choice and Press ENTER to continue[1-9]:");
 		int userinput = input.nextInt();
 		
-		
+		// While loop to repeat the switch case
+		// if userinput hold values that are less than 10
+		while (userinput<10) {
 		// Execute java classes depending on user's input
 		switch(userinput)
 		{
-				default:
-					System.out.print("\n Error! Invalid option");
-					return;
 				case 1:
 					writeItems.main(args);
 					break;
@@ -88,7 +87,12 @@ public class mainMenu
 					// Exit program when choice is 9
 					System.out.print("\n Exiting program...");
 					System.exit(0);
+				default:
+					System.out.print("\n Error! Invalid option");
+					return;
+			}
+			// Request user input again
+			userinput = input.nextInt();
 		}
-		System.out.println("Thank you for using IBM's propietary IMS. To reuse, please launch the program again");
 	}
 }
