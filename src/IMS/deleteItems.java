@@ -25,8 +25,10 @@ public class deleteItems {
 			 *
 			 * @param args the arguments
 			 */
+			
+						
 		   public static void main(String[] args) {
-			   
+
 			  // Define connection to db
 		      String JdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";
 		      String Username = "root";

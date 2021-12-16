@@ -31,6 +31,8 @@ public class writeTransactions {
 	/** The current stock. */
 	static int currentStock;
 	
+	/** Date of row entered/created */
+	static int dateAdded;
  
    /**
     * The main method.
@@ -46,7 +48,7 @@ public class writeTransactions {
       // Create scanner for user input and user defined prepared SQL statement
       Scanner keyboardInput=new Scanner(System.in);
       PreparedStatement pstmt = null;
-      String query = "INSERT INTO transactions(ID, itemDescription, quantitySold, quantityBrought, amount, currentStock) VALUES (null, ?, ?, ?, ?, ?)";
+      String query = "INSERT INTO transactions(ID, itemDescription, quantitySold, quantityBrought, amount, currentStock, dateAdded) VALUES (null, ?, ?, ?, ?, ?, ?)";
       // Connect and prompt for user input
       // Values entered in order of query
       try {
@@ -58,6 +60,7 @@ public class writeTransactions {
          pstmt.setInt(3, quantityBrought);
          pstmt.setDouble(4, amount);
          pstmt.setInt(5, currentStock);
+         pstmt.setInt(6, dateAdded);
          int status = pstmt.executeUpdate();
          if(status > 0) {
             System.out.println("Record is inserted successfully !!!");
@@ -90,5 +93,7 @@ public class writeTransactions {
       amount = keyboardInput.nextDouble();
       System.out.println("Enter current stock: ");
       currentStock = keyboardInput.nextInt();
+      System.out.println("Enter date of entry: ");
+      dateAdded = keyboardInput.nextInt();
    }
 }

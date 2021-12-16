@@ -34,11 +34,9 @@ public class fetchItems {
 	        Currency curr = Currency.getInstance(locale);
 	        
 	      // Create mysql database connection
-	      String Driver = "com.mysql.cj.jdbc.Driver";
 	      String JdbcURL = "jdbc:mysql://localhost:3306/inventory_management_system";
 	      String Username = "root";
 	      String Password = "KiloSierraFoxtrot1!";
-	      Class.forName(Driver);
 	      Connection conn = DriverManager.getConnection(JdbcURL, Username, Password);
 	      
 	      // SQL SELECT query. 
